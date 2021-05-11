@@ -15,9 +15,9 @@ LazyLoadListView provides the liberty to the developers to pass their own custom
 The layout for pages is built using Listview.builder .
 Dev have options show either inbuilt package provided ListTile (Rows) or provide their own designed widgets. 
 
-![](https://github.com/TeaTalkInternal/github_assets/blob/master/gifs/lazy_load_listview_1.gif)
-![](https://github.com/TeaTalkInternal/github_assets/blob/master/gifs/lazy_load_listview_2.gif)
-![](https://github.com/TeaTalkInternal/github_assets/blob/master/images/lazy_load_listview.png)
+
+<img src="https://github.com/TeaTalkInternal/github_assets/blob/master/gifs/lazy_load_listview_1.gif" height="500em"> <img src="https://github.com/TeaTalkInternal/github_assets/blob/master/gifs/lazy_load_listview_2.gif" height="500em"> <img src="https://github.com/TeaTalkInternal/github_assets/blob/master/images/lazy_load_listview.png" height="500em">
+
 
 #  How to use it.
 

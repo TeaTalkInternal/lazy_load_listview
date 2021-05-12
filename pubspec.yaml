@@ -1,7 +1,7 @@
 name: lazy_load_listview
-description: A new Flutter package project.
-version: 0.0.1
-homepage:
+description: A simple flutter package for displaying list of items in listview with option to lazy fetch items.
+version: 0.0.2
+homepage: https://github.com/TeaTalkInternal/lazy_load_listview
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

@@ -8,14 +8,14 @@ class ListItem {
   final String imagePath;
   final bool isLocalImage;
   //Listitem Unique Id
-  final String listItemId = UniqueKey().toString();
+  final String listItemId;
 
-  ListItem({
-    this.firstRowText = "",
-    this.secondRowText = "",
-    this.thirdRowText = "",
-    this.forthRowText = "",
-    this.imagePath = "",
-    this.isLocalImage = false,
-  });
+  ListItem(
+      {this.firstRowText = "",
+      this.secondRowText = "",
+      this.thirdRowText = "",
+      this.forthRowText = "",
+      this.imagePath = "",
+      this.isLocalImage = false,
+      this.listItemId = ""});
 }

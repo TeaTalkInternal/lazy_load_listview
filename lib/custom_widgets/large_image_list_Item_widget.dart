@@ -175,33 +175,36 @@ class LargeImageListRowThumbnailImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 220,
-      width: double.infinity,
-      clipBehavior: Clip.hardEdge,
-      child: listItem.isLocalImage
-          ? Image.asset(
-              listItem.imagePath,
-              fit: BoxFit.cover,
-            )
-          : CachedNetworkImage(
-              imageUrl: listItem.imagePath,
-              fit: BoxFit.cover,
-              placeholder: (context, url) {
-                return Center(
-                  child: SizedBox(
-                    height: 30.0,
-                    width: 30.0,
-                    child: CircularProgressIndicator(
-                        valueColor: new AlwaysStoppedAnimation<Color>(
-                      loadingIndicatorColor,
-                    )),
-                  ),
-                );
-              },
-            ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
+    return Hero(
+      tag: listItem.listItemId,
+      child: Container(
+        height: 220,
+        width: double.infinity,
+        clipBehavior: Clip.hardEdge,
+        child: listItem.isLocalImage
+            ? Image.asset(
+                listItem.imagePath,
+                fit: BoxFit.cover,
+              )
+            : CachedNetworkImage(
+                imageUrl: listItem.imagePath,
+                fit: BoxFit.cover,
+                placeholder: (context, url) {
+                  return Center(
+                    child: SizedBox(
+                      height: 30.0,
+                      width: 30.0,
+                      child: CircularProgressIndicator(
+                          valueColor: new AlwaysStoppedAnimation<Color>(
+                        loadingIndicatorColor,
+                      )),
+                    ),
+                  );
+                },
+              ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
       ),
     );
   }

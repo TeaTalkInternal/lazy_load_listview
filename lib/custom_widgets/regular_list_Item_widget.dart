@@ -160,34 +160,37 @@ class RegularListRowThumbnailImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 120.0,
-      height: 135.0,
-      margin: EdgeInsets.all(12.0),
-      clipBehavior: Clip.hardEdge,
-      child: listItem.isLocalImage
-          ? Image.asset(
-              listItem.imagePath,
-              fit: BoxFit.cover,
-            )
-          : CachedNetworkImage(
-              imageUrl: listItem.imagePath,
-              fit: BoxFit.cover,
-              placeholder: (context, url) {
-                return Center(
-                  child: SizedBox(
-                    height: 30.0,
-                    width: 30.0,
-                    child: CircularProgressIndicator(
-                        valueColor: new AlwaysStoppedAnimation<Color>(
-                      loadingIndicatorColor,
-                    )),
-                  ),
-                );
-              },
-            ),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
+    return Hero(
+      tag: listItem.listItemId,
+      child: Container(
+        width: 120.0,
+        height: 135.0,
+        margin: EdgeInsets.all(12.0),
+        clipBehavior: Clip.hardEdge,
+        child: listItem.isLocalImage
+            ? Image.asset(
+                listItem.imagePath,
+                fit: BoxFit.cover,
+              )
+            : CachedNetworkImage(
+                imageUrl: listItem.imagePath,
+                fit: BoxFit.cover,
+                placeholder: (context, url) {
+                  return Center(
+                    child: SizedBox(
+                      height: 30.0,
+                      width: 30.0,
+                      child: CircularProgressIndicator(
+                          valueColor: new AlwaysStoppedAnimation<Color>(
+                        loadingIndicatorColor,
+                      )),
+                    ),
+                  );
+                },
+              ),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
       ),
     );
   }

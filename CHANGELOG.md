@@ -5,3 +5,7 @@
 ## [0.0.2] - 12 May 2021.
 
 * Updated pubspec.yaml and README.mdd
+
+## [0.0.3] - 12 May 2021.
+
+* Added Unique Tag for images via Hero Widget
